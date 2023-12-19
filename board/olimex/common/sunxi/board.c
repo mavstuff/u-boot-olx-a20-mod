@@ -949,7 +949,8 @@ err:
 	 * If LCD-OLinuXino is detected, check if there are any overlays
 	 * set in the environmet. If so, try to load them
 	 */
-#if !defined(CONFIG_TARGET_A13_OLINUXINO) && !defined(CONFIG_TARGET_A10_OLINUXINO)
+#if !defined(CONFIG_TARGET_A13_OLINUXINO) && !defined(CONFIG_TARGET_A10_OLINUXINO) && \
+     defined(CONFIG_VIDEO_LCD_PANEL_OLINUXINO)
 
 	if (!lcd_olinuxino_is_present())
 		return;
